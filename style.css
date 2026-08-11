@@ -1,0 +1,887 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #080808;
+    color: white;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #ff4d7d;
+    border-radius: 20px;
+}
+
+
+/* ================= INTRO ================= */
+
+.intro {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at center,
+        #3b0b20,
+        #10030a 50%,
+        #000);
+
+    transition: 1.2s ease;
+}
+
+.intro.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.intro-content {
+    max-width: 700px;
+    padding: 30px;
+}
+
+.small-text {
+    color: #ff9db8;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.intro h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(70px, 12vw, 150px);
+    line-height: .8;
+}
+
+.intro h1 span {
+    color: #ff4d7d;
+}
+
+.intro-message {
+    margin: 40px 0;
+    color: #ccc;
+}
+
+.start-btn {
+    border: none;
+    padding: 17px 35px;
+    border-radius: 50px;
+    background: #ff4d7d;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+
+    box-shadow: 0 0 30px rgba(255,77,125,.5);
+
+    transition: .3s;
+}
+
+.start-btn:hover {
+    transform: scale(1.08);
+}
+
+
+
+/* ================= MUSIC ================= */
+
+#musicBtn {
+    position: fixed;
+
+    right: 25px;
+    top: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.2);
+
+    background: rgba(0,0,0,.5);
+    color: white;
+
+    cursor: pointer;
+
+    z-index: 500;
+}
+
+
+
+/* ================= HERO ================= */
+
+.hero {
+    height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.5),
+            rgba(0,0,0,.8)
+        ),
+        url("assets/photos/photo4.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+}
+
+.date {
+    letter-spacing: 8px;
+    color: #ff9db8;
+}
+
+.hero h1 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: clamp(70px, 12vw, 150px);
+
+    line-height: .9;
+
+    margin: 30px 0;
+}
+
+.hero h1 span {
+    display: block;
+    color: #ff4d7d;
+}
+
+.hero p {
+    color: #ddd;
+    font-size: 18px;
+}
+
+.scroll {
+    margin-top: 80px;
+    opacity: .6;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    50% {
+        transform: translateY(12px);
+    }
+
+}
+
+
+
+/* ================= SECTIONS ================= */
+
+.section {
+    padding: 130px 8%;
+    text-align: center;
+}
+
+.section-label {
+    color: #ff6b91;
+
+    letter-spacing: 5px;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: clamp(50px, 7vw, 90px);
+
+    line-height: 1;
+
+    margin-bottom: 80px;
+}
+
+.section h2 span {
+    color: #ff4d7d;
+}
+
+
+
+/* ================= COUNTDOWN ================= */
+
+.countdown-section {
+    text-align: center;
+    padding: 100px 20px;
+
+    background: #10030a;
+}
+
+.countdown-section h2 {
+    font-family: "Dancing Script", cursive;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.countdown {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.countdown div {
+    width: 130px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,.05);
+
+    border: 1px solid rgba(255,255,255,.1);
+
+    backdrop-filter: blur(10px);
+}
+
+.countdown span {
+    display: block;
+
+    font-size: 45px;
+
+    color: #ff4d7d;
+}
+
+.countdown small {
+    color: #aaa;
+}
+
+
+
+/* ================= TIMELINE ================= */
+
+.timeline {
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.timeline-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 70px;
+
+    margin-bottom: 120px;
+
+    text-align: left;
+}
+
+.timeline-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.timeline-image {
+    width: 50%;
+}
+
+.timeline-image img {
+    width: 100%;
+
+    aspect-ratio: 4/3;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    box-shadow: 0 30px 80px rgba(0,0,0,.6);
+
+    transition: .5s;
+}
+
+.timeline-image img:hover {
+    transform: scale(1.03) rotate(1deg);
+}
+
+.timeline-text {
+    flex: 1;
+}
+
+.timeline-text span {
+    color: #ff4d7d;
+}
+
+.timeline-text h3 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: 45px;
+
+    margin: 15px 0;
+}
+
+.timeline-text p {
+    color: #aaa;
+
+    line-height: 1.9;
+}
+
+
+
+/* ================= GALLERY ================= */
+
+.gallery {
+    max-width: 1200px;
+
+    margin: auto;
+
+    columns: 3 250px;
+
+    column-gap: 20px;
+}
+
+.photo-card {
+    margin-bottom: 20px;
+
+    break-inside: avoid;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+.photo-card img {
+    width: 100%;
+
+    display: block;
+
+    transition: .6s;
+}
+
+.photo-card:hover img {
+    transform: scale(1.08);
+}
+
+.photo-card::after {
+    content: "❤️";
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 40px;
+
+    background: rgba(0,0,0,.35);
+
+    opacity: 0;
+
+    transition: .3s;
+}
+
+.photo-card:hover::after {
+    opacity: 1;
+}
+
+
+
+/* ================= SINGLE VIDEO ================= */
+
+.single-video {
+    width: 90%;
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    padding: 20px;
+
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 0 40px rgba(255, 77, 125, 0.12);
+
+    transition: 0.5s ease;
+}
+
+.single-video:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 60px rgba(255, 77, 125, 0.2);
+}
+
+.single-video video {
+    width: 100%;
+
+    max-height: 650px;
+
+    display: block;
+
+    margin: auto;
+
+    object-fit: contain;
+
+    border-radius: 18px;
+
+    outline: none;
+
+    pointer-events: none;
+}
+
+.single-video h3 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: 32px;
+
+    margin-top: 18px;
+
+    color: white;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .single-video {
+        width: 94%;
+
+        padding: 10px;
+
+        border-radius: 18px;
+    }
+
+    .single-video video {
+        max-height: 70vh;
+
+        border-radius: 12px;
+    }
+
+    .single-video h3 {
+        font-size: 26px;
+    }
+
+}
+
+
+
+/* ================= LOVE CARDS ================= */
+
+.love-section {
+    background:
+        radial-gradient(circle at center,
+        #2a0816,
+        #080808 60%);
+}
+
+.love-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 20px;
+}
+
+.love-card {
+    padding: 40px 25px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,.04);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    transition: .4s;
+}
+
+.love-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #ff4d7d;
+
+    box-shadow: 0 20px 50px rgba(255,77,125,.15);
+}
+
+.love-card div {
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+.love-card h3 {
+    margin-bottom: 15px;
+}
+
+.love-card p {
+    color: #aaa;
+
+    line-height: 1.7;
+}
+
+
+
+/* ================= LETTER ================= */
+
+.letter-section {
+    background: #f6e8dc;
+
+    color: #27151a;
+}
+
+.letter {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 70px;
+
+    background: #fffaf3;
+
+    box-shadow: 0 30px 80px rgba(0,0,0,.4);
+
+    text-align: left;
+}
+
+.letter .section-label {
+    color: #b23a5c;
+}
+
+.letter h2 {
+    color: #3c1b25;
+
+    margin-bottom: 50px;
+}
+
+.letter-content p {
+    font-family: "Dancing Script", cursive;
+
+    font-size: 28px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+.letter-content h3 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: 45px;
+
+    color: #d83d69;
+
+    text-align: center;
+
+    margin: 50px 0;
+}
+
+.signature {
+    text-align: right;
+}
+
+
+
+/* ================= SECRET ================= */
+
+.secret-section {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        radial-gradient(circle,
+        #2d0819,
+        #050505 65%);
+}
+
+#lockScreen {
+    max-width: 700px;
+}
+
+.lock {
+    font-size: 80px;
+
+    margin-bottom: 20px;
+}
+
+#secretAnswer {
+    display: block;
+
+    width: min(400px,90%);
+
+    margin: 30px auto 15px;
+
+    padding: 15px 20px;
+
+    border-radius: 50px;
+
+    border: 1px solid #444;
+
+    background: #111;
+
+    color: white;
+
+    outline: none;
+}
+
+#lockScreen button {
+    padding: 15px 35px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #ff4d7d;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+#wrongAnswer {
+    color: #ff718e;
+
+    margin-top: 15px;
+}
+
+#secretContent {
+    display: none;
+
+    max-width: 800px;
+
+    text-align: center;
+}
+
+#secretContent.show {
+    display: block;
+
+    animation: reveal 1.5s ease;
+}
+
+@keyframes reveal {
+
+    from {
+        opacity: 0;
+        transform: scale(.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+.final-photo img {
+    width: min(500px,90%);
+
+    border-radius: 25px;
+
+    margin: 30px 0;
+}
+
+.final-message {
+    color: #aaa;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+#secretContent h1 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: 80px;
+
+    color: #ff4d7d;
+}
+
+
+
+/* ================= FINAL ================= */
+
+.final-section {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at center,
+        #3d0b20,
+        #050505 70%);
+
+    padding: 50px 20px;
+}
+
+.final-content {
+    max-width: 900px;
+}
+
+.final-content > p:first-child {
+    color: #aaa;
+
+    letter-spacing: 4px;
+}
+
+.final-content h1 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: clamp(70px,10vw,130px);
+
+    line-height: .9;
+
+    margin: 40px 0;
+}
+
+.final-content h1 span {
+    display: block;
+
+    color: #ff4d7d;
+}
+
+.final-text {
+    color: #ccc;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+.final-content h2 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: 70px;
+
+    color: #ff4d7d;
+
+    margin-top: 60px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+
+    50% {
+        transform: scale(1.08);
+    }
+
+}
+
+.birthday {
+    margin-top: 20px;
+}
+
+
+
+/* ================= FLOATING HEARTS ================= */
+
+.heart {
+    position: fixed;
+
+    bottom: -20px;
+
+    pointer-events: none;
+
+    animation: floatHeart linear forwards;
+
+    z-index: 50;
+}
+
+@keyframes floatHeart {
+
+    from {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+
+}
+
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:800px) {
+
+    .timeline-item,
+    .timeline-item.reverse {
+        flex-direction: column;
+    }
+
+    .timeline-image {
+        width: 100%;
+    }
+
+    .video-grid,
+    .love-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .letter {
+        padding: 35px 25px;
+    }
+
+    .letter-content p {
+        font-size: 24px;
+    }
+
+    .hero {
+        background-attachment: scroll;
+    }
+
+}
