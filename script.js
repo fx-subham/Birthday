@@ -164,7 +164,7 @@ function unlockSecret() {
         TO SOMETHING ONLY SHE KNOWS
     */
 
-    const correctAnswer = "bestfriend";
+    const correctAnswer = "19.12.2025";
 
     if (answer === correctAnswer) {
 
