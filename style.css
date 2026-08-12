@@ -885,3 +885,1016 @@ body::-webkit-scrollbar-thumb {
     }
 
 }
+/* =====================================================
+   SECRET SURPRISE
+===================================================== */
+
+#secretContent {
+    width: 100%;
+    max-width: none;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+/* ================= SECRET INTRO ================= */
+
+.secret-intro {
+    min-height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 100px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #3d0b20,
+            #050505 65%
+        );
+}
+
+.secret-label {
+    color: #ff6b91;
+
+    letter-spacing: 5px;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+}
+
+.secret-intro h2 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: clamp(55px, 8vw, 100px);
+
+    line-height: .95;
+
+    max-width: 1000px;
+}
+
+.secret-intro h2 span {
+    display: block;
+
+    color: #ff4d7d;
+}
+
+.secret-intro p {
+    max-width: 650px;
+
+    margin-top: 35px;
+
+    color: #aaa;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+}
+
+
+/* ================= CHAPTER ================= */
+
+.secret-chapter {
+    padding: 130px 7%;
+
+    background: #080808;
+}
+
+.secret-heading {
+    max-width: 800px;
+
+    margin: auto;
+
+    margin-bottom: 70px;
+}
+
+.secret-heading > span {
+    color: #ff4d7d;
+
+    letter-spacing: 4px;
+
+    font-size: 13px;
+}
+
+.secret-heading h2 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: clamp(50px, 7vw, 85px);
+
+    line-height: 1;
+
+    margin: 20px 0;
+}
+
+.secret-heading h2 span {
+    color: #ff4d7d;
+}
+
+.secret-heading p {
+    color: #999;
+
+    line-height: 1.8;
+}
+
+
+/* ================= CHAT GALLERY ================= */
+
+.chat-gallery {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+    align-items: center;
+}
+
+.chat-card {
+    background: #12070c;
+
+    padding: 10px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.5);
+
+    transition: .5s ease;
+}
+
+.chat-card:nth-child(2) {
+    transform: translateY(35px) rotate(2deg);
+}
+
+.chat-card:nth-child(3) {
+    transform: translateY(-25px) rotate(-2deg);
+}
+
+.chat-card:nth-child(4) {
+    transform: translateY(20px) rotate(2deg);
+}
+
+.chat-card:hover {
+    transform:
+        translateY(-12px)
+        scale(1.04)
+        rotate(0deg);
+
+    box-shadow:
+        0 25px 60px rgba(255,77,125,.2);
+}
+
+.chat-card img {
+    width: 100%;
+
+    display: block;
+
+    border-radius: 14px;
+}
+
+
+/* ================= DISTANCE ================= */
+
+.distance-section {
+    min-height: 90vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 120px 20px;
+
+    background:
+        linear-gradient(
+            rgba(5,5,5,.7),
+            rgba(5,5,5,.9)
+        ),
+        radial-gradient(
+            circle at center,
+            #29091a,
+            #050505 70%
+        );
+}
+
+.distance-content {
+    max-width: 850px;
+}
+
+.distance-content > span {
+    color: #ff4d7d;
+
+    letter-spacing: 5px;
+
+    font-size: 13px;
+}
+
+.distance-content h2 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: clamp(55px, 8vw, 100px);
+
+    line-height: .95;
+
+    margin: 25px 0 40px;
+}
+
+.distance-content h2 span {
+    display: block;
+
+    color: #ff4d7d;
+}
+
+.distance-content p {
+    color: #aaa;
+
+    font-size: 18px;
+
+    line-height: 2;
+
+    margin-bottom: 20px;
+}
+
+.distance-content h3 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: 35px;
+
+    color: #eee;
+
+    line-height: 1.5;
+
+    margin-top: 50px;
+}
+
+
+/* ================= SHARED PHOTOS ================= */
+
+.shared-section {
+    padding: 130px 6%;
+
+    background: #080808;
+}
+
+.shared-section > h2 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: clamp(55px, 7vw, 90px);
+
+    line-height: .95;
+
+    margin: 20px 0;
+}
+
+.shared-section > h2 span {
+    color: #ff4d7d;
+
+    display: block;
+}
+
+.shared-intro {
+    max-width: 650px;
+
+    margin: 0 auto 70px;
+
+    color: #999;
+
+    line-height: 1.8;
+}
+
+.shared-gallery {
+    max-width: 1200px;
+
+    margin: auto;
+
+    columns: 4 220px;
+
+    column-gap: 18px;
+}
+
+.shared-photo {
+    break-inside: avoid;
+
+    margin-bottom: 18px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    position: relative;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.5);
+}
+
+.shared-photo img {
+    width: 100%;
+
+    display: block;
+
+    transition: .7s ease;
+}
+
+.shared-photo:hover img {
+    transform: scale(1.08);
+}
+
+.shared-photo::after {
+    content: "❤️";
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 40px;
+
+    background: rgba(0,0,0,.3);
+
+    opacity: 0;
+
+    transition: .4s;
+}
+
+.shared-photo:hover::after {
+    opacity: 1;
+}
+
+
+/* ================= PROMISE ================= */
+
+.promise-section {
+    padding: 150px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #350b1c,
+            #050505 65%
+        );
+}
+
+.promise-box {
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 70px 50px;
+
+    border: 1px solid rgba(255,255,255,.1);
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.03);
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.5);
+}
+
+.promise-heart {
+    font-size: 65px;
+
+    animation: floatingHeart 2s infinite;
+}
+
+@keyframes floatingHeart {
+
+    50% {
+        transform: translateY(-12px) scale(1.08);
+    }
+
+}
+
+.promise-box > span {
+    color: #ff6b91;
+
+    letter-spacing: 4px;
+
+    font-size: 12px;
+}
+
+.promise-box h2 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: 65px;
+
+    margin: 25px 0 45px;
+}
+
+.promise-box p {
+    color: #aaa;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+}
+
+.promise-box h3 {
+    font-family: "Dancing Script", cursive;
+
+    color: #ff4d7d;
+
+    font-size: 40px;
+
+    line-height: 1.4;
+
+    margin-top: 50px;
+}
+
+
+/* ================= DESTINY ================= */
+
+.destiny-section {
+    min-height: 80vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 100px 20px;
+
+    text-align: center;
+}
+
+.destiny-content {
+    max-width: 800px;
+}
+
+.stars {
+    font-size: 30px;
+
+    letter-spacing: 15px;
+
+    margin-bottom: 30px;
+
+    animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+
+    50% {
+        opacity: .5;
+
+        transform: scale(1.1);
+    }
+
+}
+
+.destiny-content h2 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: clamp(55px, 8vw, 100px);
+
+    line-height: .95;
+}
+
+.destiny-content h2 span {
+    color: #ff4d7d;
+
+    display: block;
+}
+
+.destiny-content p {
+    color: #999;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-top: 30px;
+}
+
+.destiny-content h3 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: 38px;
+
+    color: #eee;
+
+    line-height: 1.5;
+
+    margin-top: 35px;
+}
+
+
+/* ================= FOREVER ================= */
+
+.forever-section {
+    padding: 150px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #450b22,
+            #050505 70%
+        );
+}
+
+.forever-content {
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+.final-small {
+    color: #ff6b91;
+
+    letter-spacing: 5px;
+
+    font-size: 12px;
+}
+
+.forever-content > h2 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: clamp(60px, 9vw, 110px);
+
+    line-height: .9;
+
+    margin: 30px 0;
+}
+
+.forever-content > h2 span {
+    display: block;
+
+    color: #ff4d7d;
+}
+
+.forever-text {
+    font-size: 20px;
+
+    color: #bbb;
+}
+
+
+/* ================= FUTURE LINE ================= */
+
+.future-line {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 80px 0;
+
+    color: #ff9db8;
+}
+
+.future-line div {
+    width: 80px;
+
+    height: 1px;
+
+    background: #ff4d7d;
+}
+
+
+/* ================= MANGALSUTRA ================= */
+
+.mangalsutra-box {
+    padding: 60px 30px;
+
+    border-top: 1px solid rgba(255,255,255,.1);
+
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.ring-animation {
+    font-size: 65px;
+
+    margin-bottom: 25px;
+
+    animation:
+        heartbeatFinal 1.5s infinite;
+}
+
+@keyframes heartbeatFinal {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+.mangalsutra-box p {
+    color: #aaa;
+
+    font-size: 18px;
+}
+
+.mangalsutra-box h3 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: clamp(35px, 5vw, 55px);
+
+    color: #f2d7df;
+
+    line-height: 1.4;
+
+    margin-top: 25px;
+}
+
+
+/* ================= FINAL QUESTION ================= */
+
+.final-question {
+    padding: 150px 20px;
+}
+
+.final-question > p {
+    color: #999;
+
+    font-size: 18px;
+}
+
+.final-question h1 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: clamp(65px, 10vw, 130px);
+
+    line-height: .9;
+
+    color: #ff4d7d;
+
+    margin: 40px 0;
+
+    animation: questionGlow 3s infinite;
+}
+
+@keyframes questionGlow {
+
+    50% {
+        text-shadow:
+            0 0 25px rgba(255,77,125,.6),
+            0 0 60px rgba(255,77,125,.2);
+    }
+
+}
+
+.question-sub {
+    color: #bbb;
+
+    line-height: 2;
+
+    font-size: 18px;
+}
+
+
+/* ================= FINAL PROMISE ================= */
+
+.final-promise {
+    max-width: 750px;
+
+    margin: auto;
+
+    padding: 60px 30px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.03);
+}
+
+.final-promise > span {
+    color: #ff6b91;
+
+    letter-spacing: 4px;
+
+    font-size: 12px;
+}
+
+.final-promise h2 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: 65px;
+
+    color: #ff4d7d;
+
+    margin: 25px 0;
+}
+
+.final-promise p {
+    color: #aaa;
+
+    line-height: 1.9;
+
+    font-size: 18px;
+}
+
+.final-promise h3 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: 35px;
+
+    color: #eee;
+
+    margin-top: 30px;
+}
+
+
+/* ================= END ================= */
+
+.forever-end {
+    padding-top: 150px;
+
+    padding-bottom: 80px;
+}
+
+.big-heart {
+    font-size: 90px;
+
+    animation: heartbeatFinal 1.5s infinite;
+}
+
+.forever-end h2 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: clamp(70px, 10vw, 130px);
+
+    color: #ff4d7d;
+
+    margin: 25px 0;
+}
+
+.forever-end p {
+    color: #aaa;
+
+    font-size: 18px;
+}
+
+.forever-text-big {
+    font-family: "Dancing Script", cursive;
+
+    font-size: 55px;
+
+    color: white;
+
+    margin-top: 35px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+    .chat-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .chat-card:nth-child(2),
+    .chat-card:nth-child(3),
+    .chat-card:nth-child(4) {
+        transform: none;
+    }
+
+    .promise-box {
+        padding: 45px 25px;
+    }
+
+    .promise-box h2 {
+        font-size: 48px;
+    }
+
+    .promise-box h3 {
+        font-size: 32px;
+    }
+
+    .future-line {
+        gap: 8px;
+    }
+
+    .future-line div {
+        width: 35px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .chat-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .shared-gallery {
+        columns: 2 140px;
+    }
+
+    .distance-content h3 {
+        font-size: 30px;
+    }
+
+    .mangalsutra-box h3 {
+        font-size: 35px;
+    }
+
+}
+/* ================= MANGALSUTRA ANIMATION ================= */
+
+.mangalsutra-animation {
+    width: 280px;
+    height: 150px;
+
+    margin: 0 auto 35px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    animation: necklaceFloat 3s ease-in-out infinite;
+}
+
+
+/* Necklace chains */
+
+.chain {
+    position: absolute;
+
+    width: 135px;
+    height: 80px;
+
+    top: 0;
+
+    border-top: 3px solid #d4af37;
+
+    border-radius: 50%;
+
+    filter:
+        drop-shadow(0 0 5px rgba(255,215,0,.5));
+}
+
+.left-chain {
+    left: 5px;
+
+    transform:
+        rotate(12deg);
+}
+
+.right-chain {
+    right: 5px;
+
+    transform:
+        rotate(-12deg);
+}
+
+
+/* Small black beads */
+
+.chain::before {
+    content:
+        "●  ●  ●  ●  ●  ●  ●";
+
+    position: absolute;
+
+    top: -10px;
+
+    left: 5px;
+
+    color: #111;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    white-space: nowrap;
+}
+
+
+/* Pendant */
+
+.mangalsutra-pendant {
+    position: absolute;
+
+    top: 60px;
+
+    width: 75px;
+    height: 75px;
+
+    border-radius: 50% 50% 45% 45%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #fff2a6,
+            #d4af37 45%,
+            #8c6917 100%
+        );
+
+    border: 3px solid #f1d36b;
+
+    box-shadow:
+        0 0 15px rgba(255,215,0,.6),
+        0 0 35px rgba(255,215,0,.25);
+
+    transform-origin: top center;
+}
+
+
+/* Inner gold ring */
+
+.gold-ring {
+    position: absolute;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    border: 5px solid #8c6917;
+
+    top: 17px;
+    left: 17px;
+
+    background:
+        radial-gradient(
+            circle,
+            #111 0%,
+            #111 45%,
+            transparent 46%
+        );
+}
+
+
+/* Black beads */
+
+.black-beads {
+    position: absolute;
+
+    bottom: 5px;
+
+    left: 8px;
+
+    color: #111;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* Floating animation */
+
+@keyframes necklaceFloat {
+
+    0%, 100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-8px)
+            rotate(1deg);
+    }
+
+}
+
+
+/* Pendant swinging */
+
+.mangalsutra-pendant {
+    animation:
+        pendantSwing 2.8s ease-in-out infinite;
+}
+
+@keyframes pendantSwing {
+
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(4deg);
+    }
+
+    75% {
+        transform: rotate(-4deg);
+    }
+
+}
